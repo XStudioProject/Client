@@ -1,7 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
+
+import withLayout from 'hoc/withLayout';
+
+const StyledWrapper = styled.main`
+  width: 100vw;
+  height: 100vh;
+  background-color: ${({ theme }) => theme.colors.home.background};
+`;
 
 function Home() {
-  return <p>test home</p>;
+  return <StyledWrapper />;
 }
 
-export default Home;
+export default withLayout(Home);
