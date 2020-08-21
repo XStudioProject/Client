@@ -1,4 +1,4 @@
-# Front-end for application
+# Front-end
 
 #### Technologies: 
 
