@@ -25,6 +25,9 @@ const StyledSocialMediaIconsContainer = styled.div`
     :first-of-type {
       margin-right: 32px;
     }
+    :last-of-type {
+      margin-right: 0;
+    }
   }
 `;
 
