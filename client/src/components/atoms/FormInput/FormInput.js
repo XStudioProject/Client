@@ -27,6 +27,7 @@ const StyledInput = styled.input`
   border: ${({ theme }) => `1px solid ${theme.colors.home.formInputBorder}`};
   border-radius: 6px;
   -webkit-appearance: none;
+  box-shadow: ${({ theme }) => `15px 15px 30px ${theme.colors.home.formInputShadow}`};
   ::placeholder {
     font-size: ${({ theme }) => theme.fontSize.s};
     color: ${({ theme }) => theme.colors.home.formInput};

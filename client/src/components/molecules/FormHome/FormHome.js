@@ -5,6 +5,7 @@ import Title from 'components/atoms/Title/Title';
 import RegularText from 'components/atoms/RegularText/RegularText';
 import GreenLabel from 'components/atoms/GreenLabel/GreenLabel';
 import FormInput from 'components/atoms/FormInput/FormInput';
+import ButtonV1 from 'components/atoms/ButtonV1/ButtonV1';
 
 const StyledWrapper = styled.div`
   height: auto;
@@ -45,6 +46,10 @@ const StyledGreenLabel = styled(GreenLabel)`
   margin-bottom: 32px;
 `;
 
+const StyledButtonV1 = styled(ButtonV1)`
+  width: 100%;
+`;
+
 const FormHome = () => {
   const [inputs] = useState([
     {
@@ -82,6 +87,8 @@ const FormHome = () => {
             type={type}
           />
         ))}
+        <StyledButtonV1 name="Zarejestruj się" green />
+        <StyledButtonV1 name="Zaloguj się" />
       </StyledForm>
     </StyledWrapper>
   );

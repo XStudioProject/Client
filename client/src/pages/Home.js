@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import withLayout from 'hoc/withLayout';
 
 import FormHome from 'components/molecules/FormHome/FormHome';
+import { ReactComponent as Illustration } from 'assets/images/ilustracja.svg';
 
 const StyledWrapper = styled.div`
   width: 100vw;
@@ -12,13 +13,21 @@ const StyledWrapper = styled.div`
   padding-left: 20vw;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 `;
 
 const StyledFormContainer = styled.section`
   height: auto;
+  align-self: flex-start;
+  transform: scale(1);
 `;
-const StyledSVGContainer = styled.div``;
+const StyledSVGContainer = styled.div`
+  height: 100%;
+  width: auto;
+  svg {
+    height: 80%;
+  }
+`;
 
 function Home() {
   return (
@@ -26,7 +35,9 @@ function Home() {
       <StyledFormContainer>
         <FormHome />
       </StyledFormContainer>
-      <StyledSVGContainer></StyledSVGContainer>
+      <StyledSVGContainer>
+        <Illustration />
+      </StyledSVGContainer>
     </StyledWrapper>
   );
 }

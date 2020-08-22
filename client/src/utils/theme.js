@@ -17,10 +17,16 @@ export const theme = {
   fontWeights: {
     regular: 400,
     medium: 500,
+    semiBold: 600,
     bold: 700,
     extraBold: 800,
   },
   colors: {
+    general: {
+      green: '#00CC96',
+      white: '#FFFFFF',
+      greenShadow: 'rgba(0, 204, 150, 0.2)',
+    },
     home: {
       background: '#FAFAFA',
       formText: '#041C3F',
