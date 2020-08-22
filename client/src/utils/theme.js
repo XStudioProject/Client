@@ -26,6 +26,7 @@ export const theme = {
       green: '#00CC96',
       white: '#FFFFFF',
       greenShadow: 'rgba(0, 204, 150, 0.2)',
+      checkboxBorder: '#F4F4F4',
     },
     home: {
       background: '#FAFAFA',
@@ -36,6 +37,7 @@ export const theme = {
       greenLabel: '#00CC96',
       markdownLine: '#F4F4F4',
       whiteLabel: '#FFFFFF',
+      ORLabelText: '#7F8B9C',
     },
   },
 };

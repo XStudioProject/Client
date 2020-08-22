@@ -18,8 +18,15 @@ const StyledWrapper = styled.div`
 
 const StyledFormContainer = styled.section`
   height: auto;
+  width: auto;
   align-self: flex-start;
-  transform: scale(1);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  @media (max-height: 1500px) {
+    transform: scale(0.95);
+    transform-origin: left;
+  }
 `;
 const StyledSVGContainer = styled.div`
   height: 100%;

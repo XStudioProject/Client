@@ -6,10 +6,14 @@ import RegularText from 'components/atoms/RegularText/RegularText';
 import GreenLabel from 'components/atoms/GreenLabel/GreenLabel';
 import FormInput from 'components/atoms/FormInput/FormInput';
 import ButtonV1 from 'components/atoms/ButtonV1/ButtonV1';
+import FormCheckbox from 'components/atoms/FormCheckbox/FormCheckbox';
+import PasswordRemainder from 'components/atoms/PasswordRemainder/PasswordRemainder';
+import ORLabel from 'components/atoms/ORLabel/ORLabel';
 
 const StyledWrapper = styled.div`
   height: auto;
-  width: 464px;
+  width: auto;
+  max-width: 464px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -50,6 +54,14 @@ const StyledButtonV1 = styled(ButtonV1)`
   width: 100%;
 `;
 
+const StyledCheckboxContainer = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 const FormHome = () => {
   const [inputs] = useState([
     {
@@ -87,8 +99,13 @@ const FormHome = () => {
             type={type}
           />
         ))}
+        <StyledCheckboxContainer>
+          <FormCheckbox labelName="Zapamiętaj mnie" />
+          <PasswordRemainder>Zapomniałem hasła</PasswordRemainder>
+        </StyledCheckboxContainer>
         <StyledButtonV1 name="Zarejestruj się" green />
         <StyledButtonV1 name="Zaloguj się" />
+        <ORLabel>LUB</ORLabel>
       </StyledForm>
     </StyledWrapper>
   );
