@@ -22,6 +22,8 @@ const StyledSocialMediaIconsContainer = styled.div`
   height: 100%;
   width: auto;
   svg {
+    cursor: pointer;
+
     :first-of-type {
       margin-right: 32px;
     }

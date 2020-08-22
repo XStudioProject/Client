@@ -25,10 +25,11 @@ export const theme = {
       background: '#FAFAFA',
       formText: '#041C3F',
       formInput: '#7F8B9C',
+      formInputShadow: 'rgba(174, 174, 192, 0.2)',
+      formInputBorder: '#F4F4F4',
       greenLabel: '#00CC96',
       markdownLine: '#F4F4F4',
       whiteLabel: '#FFFFFF',
-      shadowLabel: '#AEAEC0',
     },
   },
 };
