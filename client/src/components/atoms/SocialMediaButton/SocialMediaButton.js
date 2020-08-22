@@ -1,0 +1,49 @@
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
+import googleIcon from 'assets/images/google.svg';
+
+const StyledWrapper = styled.div`
+  width: 218px;
+  height: 60px;
+  background-color: ${({ theme }) => theme.colors.general.socialMediaButtonBackground};
+  -webkit-appearance: none;
+  box-shadow: ${({ theme }) => `10px 10px 30px ${theme.colors.general.socialMediaButtonShadow}`};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: ${({ theme }) => `1px solid ${theme.colors.general.checkboxBorder}`};
+  border-radius: 6px;
+  cursor: pointer;
+
+  img {
+    height: 40px;
+    width: 40px;
+    margin-right: 16px;
+  }
+
+  p {
+    font-size: ${({ theme }) => theme.fontSize.m};
+    color: ${({ theme }) => theme.colors.general.socialMediaButtonText};
+  }
+`;
+
+const SocialMediaButton = ({ icon, name }) => (
+  <StyledWrapper>
+    <img src={icon} alt="social-media-icon" />
+    <p>{name}</p>
+  </StyledWrapper>
+);
+
+SocialMediaButton.propTypes = {
+  icon: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};
+
+SocialMediaButton.defaultProps = {
+  icon: googleIcon,
+  name: 'Google',
+};
+
+export default SocialMediaButton;

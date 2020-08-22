@@ -9,6 +9,7 @@ const StyledHeading = styled.h2`
   font-size: ${({ theme }) => theme.fontSize.m};
   color: ${({ theme }) => theme.colors.home.ORLabelText};
   width: 100%;
+  margin-bottom: 32px;
 
   &:before,
   &:after {

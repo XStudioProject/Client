@@ -9,6 +9,10 @@ import ButtonV1 from 'components/atoms/ButtonV1/ButtonV1';
 import FormCheckbox from 'components/atoms/FormCheckbox/FormCheckbox';
 import PasswordRemainder from 'components/atoms/PasswordRemainder/PasswordRemainder';
 import ORLabel from 'components/atoms/ORLabel/ORLabel';
+import SocialMediaButton from 'components/atoms/SocialMediaButton/SocialMediaButton';
+
+import facebookIcon from 'assets/images/facebook.svg';
+import googleIcon from 'assets/images/google.svg';
 
 const StyledWrapper = styled.div`
   height: auto;
@@ -62,6 +66,15 @@ const StyledCheckboxContainer = styled.div`
   justify-content: space-between;
 `;
 
+const StyledSocialMediaButtonsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+`;
+
 const FormHome = () => {
   const [inputs] = useState([
     {
@@ -75,6 +88,17 @@ const FormHome = () => {
       labelName: 'Hasło',
       placeholder: '********',
       type: 'password',
+    },
+  ]);
+
+  const [socialMediaButtons] = useState([
+    {
+      name: 'Google',
+      icon: googleIcon,
+    },
+    {
+      name: 'Facebook',
+      icon: facebookIcon,
     },
   ]);
 
@@ -105,8 +129,13 @@ const FormHome = () => {
         </StyledCheckboxContainer>
         <StyledButtonV1 name="Zarejestruj się" green />
         <StyledButtonV1 name="Zaloguj się" />
-        <ORLabel>LUB</ORLabel>
       </StyledForm>
+      <ORLabel>LUB</ORLabel>
+      <StyledSocialMediaButtonsContainer>
+        {socialMediaButtons.map(({ name, icon }) => (
+          <SocialMediaButton key={name} name={name} icon={icon} />
+        ))}
+      </StyledSocialMediaButtonsContainer>
     </StyledWrapper>
   );
 };

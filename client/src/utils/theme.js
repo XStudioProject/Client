@@ -27,6 +27,9 @@ export const theme = {
       white: '#FFFFFF',
       greenShadow: 'rgba(0, 204, 150, 0.2)',
       checkboxBorder: '#F4F4F4',
+      socialMediaButtonBackground: '#FFFFFF',
+      socialMediaButtonText: '#041C3F',
+      socialMediaButtonShadow: 'rgba(174, 174, 192, 0.2)',
     },
     home: {
       background: '#FAFAFA',
