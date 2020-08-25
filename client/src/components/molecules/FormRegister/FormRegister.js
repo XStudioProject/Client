@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import useWindowSize from 'utils/useWindowSize';
-
 import Title from 'components/atoms/Title/Title';
-import RegularText from 'components/atoms/RegularText/RegularText';
 import GreenLabel from 'components/atoms/GreenLabel/GreenLabel';
 import FormInput from 'components/atoms/FormInput/FormInput';
 import ButtonV1 from 'components/atoms/ButtonV1/ButtonV1';
 import FormCheckbox from 'components/atoms/FormCheckbox/FormCheckbox';
-import PasswordRemainder from 'components/atoms/PasswordRemainder/PasswordRemainder';
 import ORLabel from 'components/atoms/ORLabel/ORLabel';
 import SocialMediaButton from 'components/atoms/SocialMediaButton/SocialMediaButton';
 
@@ -18,17 +14,18 @@ import googleIcon from 'assets/images/google.svg';
 
 const StyledWrapper = styled.div`
   height: auto;
-  width: auto;
-  max-width: 464px;
+  width: 100%;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   background: none;
-  margin: 0;
-
-  @media (max-width: 1500px) {
-    max-width: 400px;
+  @media (min-width: 1920px) and (min-height: 1080px) {
+    width: 500px;
+  }
+  @media (max-width: 700px) {
+    max-width: 90vw;
   }
 `;
 
@@ -50,16 +47,12 @@ const StyledInformationContainer = styled.div`
 `;
 
 const StyledTitleContainer = styled(StyledInformationContainer)`
-  margin-bottom: 8px;
-  @media (max-width: 700px) {
-    justify-content: center;
-  }
-`;
-
-const StyledDescriptionContainer = styled(StyledInformationContainer)`
   margin-bottom: 16px;
   @media (min-width: 1920px) and (min-height: 1080px) {
     margin-bottom: 32px;
+  }
+  @media (max-width: 700px) {
+    justify-content: center;
   }
 `;
 
@@ -67,22 +60,6 @@ const StyledGreenLabel = styled(GreenLabel)`
   margin-bottom: 16px;
   @media (min-width: 1920px) and (min-height: 1080px) {
     margin-bottom: 32px;
-  }
-`;
-
-const StyledButtonV1 = styled(ButtonV1)`
-  width: 100%;
-`;
-
-const StyledCheckboxContainer = styled.div`
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 8px;
-  @media (min-width: 1920px) and (min-height: 1080px) {
-    margin-bottom: 16px;
   }
 `;
 
@@ -95,16 +72,14 @@ const StyledSocialMediaButtonsContainer = styled.div`
   margin-bottom: 16px;
 `;
 
-const FormHome = () => {
-  const size = useWindowSize();
-
-  const [title] = useState('WITAJ W PROJ.X');
-
-  const [titleDescription] = useState(
-    'Zautomatyzuj swój czas, który poświęcasz na planowanie, liczenie i kontakt!',
-  );
-
+const FormRegister = () => {
   const [inputs] = useState([
+    {
+      name: 'name',
+      labelName: 'Imię i nazwisko',
+      placeholder: 'John Wick',
+      type: 'text',
+    },
     {
       name: 'email',
       labelName: 'Adres E-Mail',
@@ -116,6 +91,12 @@ const FormHome = () => {
       labelName: 'Hasło',
       placeholder: '********',
       type: 'password',
+    },
+    {
+      name: 'phoneNumber',
+      labelName: 'Numer telefonu',
+      placeholder: '+48 145 523 555',
+      type: 'text',
     },
   ]);
 
@@ -130,41 +111,41 @@ const FormHome = () => {
     },
   ]);
 
+  const [checkboxes] = useState([
+    {
+      labelName: 'Akceptuje warunki umowy i regulamin',
+      required: true,
+      id: 1,
+    },
+    {
+      labelName: 'Zgadzam się na marketing od PROJX',
+      required: false,
+      id: 2,
+    },
+  ]);
+
   return (
     <StyledWrapper>
       <StyledTitleContainer>
-        <Title>{title}</Title>
+        <Title>Zarejestruj się</Title>
       </StyledTitleContainer>
-      <StyledDescriptionContainer>
-        <RegularText higher>{titleDescription}</RegularText>
-      </StyledDescriptionContainer>
-      {size.width > 700 ? (
-        <>
-          <StyledGreenLabel />
-          <StyledForm>
-            {inputs.map(({ name, labelName, placeholder, type }) => (
-              <FormInput
-                key={name}
-                name={name}
-                labelName={labelName}
-                placeholder={placeholder}
-                type={type}
-              />
-            ))}
-            <StyledCheckboxContainer>
-              <FormCheckbox labelName="Zapamiętaj mnie" />
-              <PasswordRemainder>Zapomniałem hasła</PasswordRemainder>
-            </StyledCheckboxContainer>
-            <StyledButtonV1 name="Zaloguj się" />
-          </StyledForm>
-          <StyledButtonV1 name="Zarejestruj się" green />
-        </>
-      ) : (
-        <>
-          <StyledButtonV1 name="Zarejestruj się" green />
-          <StyledButtonV1 name="Zaloguj się" />
-        </>
-      )}
+      <StyledGreenLabel />
+      <StyledForm>
+        {inputs.map(({ name, labelName, placeholder, type }) => (
+          <FormInput
+            key={name}
+            name={name}
+            labelName={labelName}
+            placeholder={placeholder}
+            type={type}
+          />
+        ))}
+        {checkboxes.map(({ labelName, required, id }) => (
+          <FormCheckbox labelName={labelName} key={id} required={required} />
+        ))}
+
+        <ButtonV1 name="Zarejestruj się" green />
+      </StyledForm>
       <ORLabel>LUB</ORLabel>
       <StyledSocialMediaButtonsContainer>
         {socialMediaButtons.map(({ name, icon }) => (
@@ -175,4 +156,4 @@ const FormHome = () => {
   );
 };
 
-export default FormHome;
+export default FormRegister;

@@ -30,6 +30,7 @@ export const theme = {
       socialMediaButtonBackground: '#FFFFFF',
       socialMediaButtonText: '#041C3F',
       socialMediaButtonShadow: 'rgba(174, 174, 192, 0.2)',
+      requiredStar: '#FF3535',
     },
     home: {
       background: '#FAFAFA',

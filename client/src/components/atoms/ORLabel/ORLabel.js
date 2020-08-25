@@ -6,10 +6,14 @@ const StyledHeading = styled.h2`
   overflow: hidden;
   text-align: center;
   font-weight: ${({ theme }) => theme.fontWeights.regular};
-  font-size: ${({ theme }) => theme.fontSize.m};
+  font-size: ${({ theme }) => theme.fontSize.xs};
   color: ${({ theme }) => theme.colors.home.ORLabelText};
   width: 100%;
-  margin-bottom: 32px;
+  margin-bottom: 8px;
+  @media (min-width: 1920px) and (min-height: 1080px) {
+    margin-bottom: 16px;
+    font-size: ${({ theme }) => theme.fontSize.m};
+  }
 
   &:before,
   &:after {

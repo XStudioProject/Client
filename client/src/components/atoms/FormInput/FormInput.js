@@ -7,18 +7,24 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   width: 100%;
   height: auto;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
+  @media (min-width: 1920px) and (min-height: 1080px) {
+    margin-bottom: 16px;
+  }
 `;
 
 const StyledLabel = styled.label`
   color: ${({ theme }) => theme.colors.home.formText};
-  font-size: ${({ theme }) => theme.fontSize.m};
+  font-size: ${({ theme }) => theme.fontSize.s};
   margin-bottom: 8px;
+  @media (min-width: 1920px) and (min-height: 1080px) {
+    font-size: ${({ theme }) => theme.fontSize.m};
+  }
 `;
 
 const StyledInput = styled.input`
   width: 100%;
-  height: 60px;
+  height: 40px;
   padding-left: 1.6rem;
   background-color: ${({ theme }) => theme.colors.home.whiteLabel};
   display: flex;
@@ -29,9 +35,15 @@ const StyledInput = styled.input`
   -webkit-appearance: none;
   box-shadow: ${({ theme }) => `15px 15px 30px ${theme.colors.home.formInputShadow}`};
   ::placeholder {
-    font-size: ${({ theme }) => theme.fontSize.s};
+    font-size: ${({ theme }) => theme.fontSize.xs};
     color: ${({ theme }) => theme.colors.home.formInput};
     font-family: 'Montserrat', sans-serif;
+    @media (min-width: 1920px) and (min-height: 1080px) {
+      font-size: ${({ theme }) => theme.fontSize.s};
+    }
+  }
+  @media (min-width: 1920px) and (min-height: 1080px) {
+    height: 48px;
   }
 `;
 

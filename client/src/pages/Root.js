@@ -8,6 +8,7 @@ import { GlobalStyle } from 'utils/GlobalStyle';
 
 // Pages components
 import Home from 'pages/Home';
+import Register from 'pages/Register';
 
 function Root() {
   return (
@@ -15,7 +16,8 @@ function Root() {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Switch>
-          <Route path="/" component={Home} />
+          <Route path="/" exact component={Home} />
+          <Route path="/register" exact component={Register} />
         </Switch>
       </ThemeProvider>
     </Router>

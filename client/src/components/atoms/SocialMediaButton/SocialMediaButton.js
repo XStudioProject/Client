@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import googleIcon from 'assets/images/google.svg';
 
 const StyledWrapper = styled.div`
-  width: 218px;
+  width: 100%;
   height: 60px;
   background-color: ${({ theme }) => theme.colors.general.socialMediaButtonBackground};
   -webkit-appearance: none;
@@ -18,14 +18,25 @@ const StyledWrapper = styled.div`
   cursor: pointer;
 
   img {
-    height: 40px;
-    width: 40px;
-    margin-right: 16px;
+    height: 32px;
+    width: 32px;
+    margin-right: 8px;
+    @media (min-width: 1920px) and (min-height: 1080px) {
+      height: 40px;
+      width: 40px;
+      margin-right: 16px;
+    }
   }
 
   p {
-    font-size: ${({ theme }) => theme.fontSize.m};
+    font-size: ${({ theme }) => theme.fontSize.s};
     color: ${({ theme }) => theme.colors.general.socialMediaButtonText};
+    @media (min-width: 1920px) and (min-height: 1080px) {
+      font-size: ${({ theme }) => theme.fontSize.m};
+    }
+  }
+  :first-of-type {
+    margin-right: 16px;
   }
 `;
 
