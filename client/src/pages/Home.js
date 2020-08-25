@@ -14,25 +14,36 @@ const StyledWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  @media (max-height: 900px) {
+    align-items: flex-start;
+  }
 `;
 
 const StyledFormContainer = styled.section`
-  height: auto;
+  height: 100%;
   width: auto;
-  align-self: flex-start;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  @media (max-height: 1500px) {
-    transform: scale(0.95);
-    transform-origin: left;
+  align-items: flex-start;
+  justify-content: center;
+  @media (min-height: 1000px) {
+    align-items: center;
   }
 `;
 const StyledSVGContainer = styled.div`
   height: 100%;
-  width: auto;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  @media (min-height: 1000px) {
+    align-items: center;
+  }
   svg {
-    height: 80%;
+    margin-left: 2rem;
+    max-width: 80%;
+    max-height: 80%;
+    min-width: 500px;
+    min-height: 500px;
   }
 `;
 

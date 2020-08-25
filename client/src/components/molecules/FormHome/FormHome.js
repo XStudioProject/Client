@@ -23,6 +23,20 @@ const StyledWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   background: none;
+  transform-origin: left;
+
+  @media (min-width: 2500px) {
+    transform: scale(1);
+  }
+  @media (max-width: 2000px) {
+    transform: scale(0.95);
+  }
+  @media (max-width: 1500px) {
+    transform: scale(0.85);
+  }
+  @media (max-width: 1000px) {
+    transform: scale(0.8);
+  }
 `;
 
 const StyledForm = styled.form`

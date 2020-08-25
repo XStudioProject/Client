@@ -8,7 +8,7 @@ import { ReactComponent as SocialMediaLinkedinIcon } from 'assets/images/linkedi
 import Logo from 'components/atoms/Logo/Logo';
 
 const StyledHeader = styled.header`
-  width: 100%;
+  width: 100vw;
   height: 56px;
   background: none;
   display: flex;
