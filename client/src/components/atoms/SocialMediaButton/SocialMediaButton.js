@@ -31,12 +31,20 @@ const StyledWrapper = styled.div`
   p {
     font-size: ${({ theme }) => theme.fontSize.s};
     color: ${({ theme }) => theme.colors.general.socialMediaButtonText};
+
     @media (min-width: 1920px) and (min-height: 1080px) {
       font-size: ${({ theme }) => theme.fontSize.m};
+    }
+
+    @media (max-width: 400px) {
+      font-size: ${({ theme }) => theme.fontSize.xs};
     }
   }
   :first-of-type {
     margin-right: 16px;
+    @media (max-width: 700px) {
+      margin-right: 8px;
+    }
   }
 `;
 

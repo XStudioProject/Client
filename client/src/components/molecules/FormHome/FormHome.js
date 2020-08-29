@@ -30,6 +30,10 @@ const StyledWrapper = styled.div`
   @media (max-width: 1500px) {
     max-width: 400px;
   }
+
+  @media (max-width: 1200px) {
+    margin-top: 2rem;
+  }
 `;
 
 const StyledForm = styled.form`
@@ -51,7 +55,7 @@ const StyledInformationContainer = styled.div`
 
 const StyledTitleContainer = styled(StyledInformationContainer)`
   margin-bottom: 8px;
-  @media (max-width: 700px) {
+  @media (max-width: 1200px) {
     justify-content: center;
   }
 `;
@@ -60,6 +64,9 @@ const StyledDescriptionContainer = styled(StyledInformationContainer)`
   margin-bottom: 16px;
   @media (min-width: 1920px) and (min-height: 1080px) {
     margin-bottom: 32px;
+  }
+  @media (max-width: 700px) {
+    justify-content: center;
   }
 `;
 
