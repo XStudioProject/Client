@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import useWindowSize from 'utils/useWindowSize';
 
@@ -34,6 +35,10 @@ const StyledWrapper = styled.div`
   @media (max-width: 1200px) {
     margin-top: 2rem;
   }
+
+  @media (min-width: 2100px) {
+    max-width: 650px;
+  }
 `;
 
 const StyledForm = styled.form`
@@ -55,16 +60,19 @@ const StyledInformationContainer = styled.div`
 
 const StyledTitleContainer = styled(StyledInformationContainer)`
   margin-bottom: 8px;
-  @media (max-width: 1200px) {
+
+  @media (max-width: 700px) {
     justify-content: center;
   }
 `;
 
 const StyledDescriptionContainer = styled(StyledInformationContainer)`
   margin-bottom: 16px;
+
   @media (min-width: 1920px) and (min-height: 1080px) {
     margin-bottom: 32px;
   }
+
   @media (max-width: 700px) {
     justify-content: center;
   }
@@ -72,13 +80,22 @@ const StyledDescriptionContainer = styled(StyledInformationContainer)`
 
 const StyledGreenLabel = styled(GreenLabel)`
   margin-bottom: 16px;
+
   @media (min-width: 1920px) and (min-height: 1080px) {
     margin-bottom: 32px;
   }
 `;
 
+const StyledLink = styled(Link)`
+  width: 100%;
+`;
+
 const StyledButtonV1 = styled(ButtonV1)`
   width: 100%;
+`;
+
+const StyledFormCheckbox = styled(FormCheckbox)`
+  margin: 0;
 `;
 
 const StyledCheckboxContainer = styled.div`
@@ -88,6 +105,7 @@ const StyledCheckboxContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 8px;
+
   @media (min-width: 1920px) and (min-height: 1080px) {
     margin-bottom: 16px;
   }
@@ -159,7 +177,7 @@ const FormHome = () => {
               />
             ))}
             <StyledCheckboxContainer>
-              <FormCheckbox labelName="Zapamiętaj mnie" />
+              <StyledFormCheckbox labelName="Zapamiętaj mnie" />
               <PasswordRemainder>Zapomniałem hasła</PasswordRemainder>
             </StyledCheckboxContainer>
             <StyledButtonV1 name="Zaloguj się" />
@@ -168,7 +186,9 @@ const FormHome = () => {
         </>
       ) : (
         <>
-          <StyledButtonV1 name="Zarejestruj się" green />
+          <StyledLink to="/register">
+            <StyledButtonV1 name="Zarejestruj się" green />
+          </StyledLink>
           <StyledButtonV1 name="Zaloguj się" />
         </>
       )}

@@ -8,6 +8,7 @@ const StyledWrapper = styled.div`
   width: 100%;
   height: auto;
   margin-bottom: 12px;
+
   @media (min-width: 1920px) and (min-height: 1080px) {
     margin-bottom: 16px;
   }
@@ -17,8 +18,14 @@ const StyledLabel = styled.label`
   color: ${({ theme }) => theme.colors.home.formText};
   font-size: ${({ theme }) => theme.fontSize.s};
   margin-bottom: 8px;
+
   @media (min-width: 1920px) and (min-height: 1080px) {
     font-size: ${({ theme }) => theme.fontSize.m};
+  }
+
+  @media (max-width: 700px) {
+    font-weight: ${({ theme }) => theme.fontWeights.medium};
+    font-size: ${({ theme }) => theme.fontSize.xs};
   }
 `;
 
@@ -34,14 +41,21 @@ const StyledInput = styled.input`
   border-radius: 6px;
   -webkit-appearance: none;
   box-shadow: ${({ theme }) => `15px 15px 30px ${theme.colors.home.formInputShadow}`};
+
   ::placeholder {
     font-size: ${({ theme }) => theme.fontSize.xs};
     color: ${({ theme }) => theme.colors.home.formInput};
     font-family: 'Montserrat', sans-serif;
+
     @media (min-width: 1920px) and (min-height: 1080px) {
       font-size: ${({ theme }) => theme.fontSize.s};
     }
+
+    @media (max-width: 700px) {
+      font-weight: ${({ theme }) => theme.fontWeights.medium};
+    }
   }
+
   @media (min-width: 1920px) and (min-height: 1080px) {
     height: 48px;
   }

@@ -8,8 +8,15 @@ const StyledWrapper = styled.div`
   height: auto;
   align-items: center;
   margin-bottom: 8px;
+
   @media (min-width: 1920px) and (min-height: 1080px) {
     margin-bottom: 16px;
+  }
+
+  @media (max-width: 700px) {
+    :last-of-type {
+      margin-bottom: 24px;
+    }
   }
 `;
 
@@ -20,6 +27,7 @@ const StyledCheckbox = styled.input`
   border: ${({ theme }) => `2px solid ${theme.colors.general.checkboxBorder}`};
   border-radius: 2px;
   margin-right: 8px;
+
   @media (min-width: 1920px) and (min-height: 1080px) {
     width: 28px;
     height: 28px;
@@ -29,6 +37,7 @@ const StyledCheckbox = styled.input`
 const StyledCheckboxLabel = styled.label`
   font-size: ${({ theme }) => theme.fontSize.xs};
   color: ${({ theme }) => theme.colors.home.formText};
+
   @media (min-width: 1920px) and (min-height: 1080px) {
     font-size: ${({ theme }) => theme.fontSize.s};
   }

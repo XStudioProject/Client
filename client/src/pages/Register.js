@@ -5,7 +5,7 @@ import FormTemplate from 'templates/FormTemplate';
 
 function Register() {
   return (
-    <FormTemplate>
+    <FormTemplate nosvgmobile>
       <FormRegister />
     </FormTemplate>
   );

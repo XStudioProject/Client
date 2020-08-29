@@ -30,9 +30,11 @@ const StyledWrapper = styled.button`
     height: 60px;
     margin-bottom: 16px;
   }
+
   @media (max-width: 700px) {
     min-width: 250px;
   }
+
   @media (min-width: 1920px) and (min-height: 1080px) {
     height: 48px;
   }

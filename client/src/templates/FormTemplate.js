@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 
 import { ReactComponent as Illustration } from 'assets/images/ilustracja.svg';
@@ -25,8 +25,12 @@ const StyledWrapper = styled.div`
 
   @media (max-width: 700px) {
     padding: 0 16px 0 16px;
-    max-height: 100vh;
+    max-height: calc(100vh - 60px);
     min-height: calc(100vh - 150px);
+  }
+  @media (max-height: 550px) {
+    min-height: 100vh;
+    margin-top: 7rem;
   }
 `;
 
@@ -43,6 +47,9 @@ const StyledFormContainer = styled.section`
     margin: 0;
     min-height: 330px;
   }
+  @media (min-width: 1200px) {
+    justify-content: flex-start;
+  }
 `;
 const StyledImageContainer = styled.div`
   height: 100%;
@@ -51,6 +58,7 @@ const StyledImageContainer = styled.div`
   align-items: center;
   padding: 0.5rem;
   justify-content: center;
+
   @media (min-height: 1000px) {
     align-items: center;
     padding: 0;
@@ -62,27 +70,46 @@ const StyledImageContainer = styled.div`
 
   svg {
     width: 100%;
-    height: 100;
+    height: 100%;
     min-width: 600px;
     max-width: 900px;
     max-height: 900px;
-    @media (max-width: 700px) {
-      max-height: 40vh;
-    }
+
     @media (max-width: 1200px) {
-      min-height: 230px;
+      min-height: 200px;
       min-width: 300px;
       max-height: 30vh;
     }
+
+    @media (max-width: 1200px) and (min-height: 1200px) {
+      max-height: 35vh;
+    }
+
+    @media (max-width: 700px) {
+      max-height: 40vh;
+      min-width: 200px;
+    }
+
+    @media (max-height: 630px) {
+      max-height: 25vh;
+    }
   }
+
+  ${({ nosvgmobile }) =>
+    nosvgmobile &&
+    css`
+      @media (max-width: 700px) {
+        display: none;
+      }
+    `}
 `;
 
-const FormTemplate = ({ children }) => {
+const FormTemplate = ({ children, nosvgmobile }) => {
   return (
     <>
       <StyledWrapper>
         <StyledFormContainer>{children}</StyledFormContainer>
-        <StyledImageContainer>
+        <StyledImageContainer nosvgmobile={nosvgmobile}>
           <Illustration />
         </StyledImageContainer>
       </StyledWrapper>
@@ -92,6 +119,7 @@ const FormTemplate = ({ children }) => {
 
 FormTemplate.propTypes = {
   children: PropTypes.node.isRequired,
+  nosvgmobile: PropTypes.bool,
 };
 
 export default withLayout(FormTemplate);

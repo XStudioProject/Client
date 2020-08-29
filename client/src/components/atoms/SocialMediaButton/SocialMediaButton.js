@@ -42,6 +42,7 @@ const StyledWrapper = styled.div`
   }
   :first-of-type {
     margin-right: 16px;
+
     @media (max-width: 700px) {
       margin-right: 8px;
     }

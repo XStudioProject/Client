@@ -9,7 +9,7 @@ const Title = styled.h2`
     font-size: ${({ theme }) => theme.fontSize.xxxl};
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 700px) {
     text-align: center;
   }
   @media (max-width: 700px) {

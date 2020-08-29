@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+import useWindowSize from 'utils/useWindowSize';
+
 import Title from 'components/atoms/Title/Title';
 import GreenLabel from 'components/atoms/GreenLabel/GreenLabel';
 import FormInput from 'components/atoms/FormInput/FormInput';
@@ -21,11 +23,23 @@ const StyledWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   background: none;
+
   @media (min-width: 1920px) and (min-height: 1080px) {
     width: 500px;
   }
+
   @media (max-width: 700px) {
     max-width: 90vw;
+  }
+
+  @media (min-width: 2100px) {
+    max-width: 650px;
+  }
+
+  @media (max-width: 700px) {
+    height: calc(100vh - 60px);
+    justify-content: space-evenly;
+    padding-top: 16px;
   }
 `;
 
@@ -48,9 +62,11 @@ const StyledInformationContainer = styled.div`
 
 const StyledTitleContainer = styled(StyledInformationContainer)`
   margin-bottom: 16px;
+
   @media (min-width: 1920px) and (min-height: 1080px) {
     margin-bottom: 32px;
   }
+
   @media (max-width: 700px) {
     justify-content: center;
   }
@@ -58,6 +74,7 @@ const StyledTitleContainer = styled(StyledInformationContainer)`
 
 const StyledGreenLabel = styled(GreenLabel)`
   margin-bottom: 16px;
+
   @media (min-width: 1920px) and (min-height: 1080px) {
     margin-bottom: 32px;
   }
@@ -73,6 +90,8 @@ const StyledSocialMediaButtonsContainer = styled.div`
 `;
 
 const FormRegister = () => {
+  const size = useWindowSize();
+
   const [inputs] = useState([
     {
       name: 'name',
@@ -126,10 +145,14 @@ const FormRegister = () => {
 
   return (
     <StyledWrapper>
-      <StyledTitleContainer>
-        <Title>Zarejestruj się</Title>
-      </StyledTitleContainer>
-      <StyledGreenLabel />
+      {size.width > 700 && (
+        <>
+          <StyledTitleContainer>
+            <Title>Zarejestruj się</Title>
+          </StyledTitleContainer>
+          <StyledGreenLabel />
+        </>
+      )}
       <StyledForm>
         {inputs.map(({ name, labelName, placeholder, type }) => (
           <FormInput

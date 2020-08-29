@@ -18,9 +18,11 @@ const StyledHeader = styled.header`
   padding-right: 43px;
   margin-top: 40px;
   padding-left: ${({ location }) => (location === '/' || location === '/register' ? '20vw' : 0)};
+
   @media (max-width: 1350px) {
     padding-left: ${({ location }) => (location === '/' || location === '/register' ? '10vw' : 0)};
   }
+
   @media (max-width: 700px) {
     padding: 0;
     justify-content: center;
