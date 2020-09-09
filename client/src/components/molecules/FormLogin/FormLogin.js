@@ -117,7 +117,7 @@ const FormLogin = () => {
           <StyledFormCheckbox labelName="Zapamiętaj mnie" />
           <PasswordRemainder>Zapomniałem hasła</PasswordRemainder>
         </StyledCheckboxContainer>
-        <StyledButtonV1 name="Zaloguj się" />
+        <StyledButtonV1 name="Zaloguj się" green />
       </StyledForm>
       <ORLabel>LUB</ORLabel>
       <StyledSocialMediaButtonsContainer>

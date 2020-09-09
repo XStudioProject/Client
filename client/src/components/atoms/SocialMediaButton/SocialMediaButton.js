@@ -6,7 +6,7 @@ import googleIcon from 'assets/images/google.svg';
 
 const StyledWrapper = styled.div`
   width: 100%;
-  height: 60px;
+  height: 56px;
   background-color: ${({ theme }) => theme.colors.general.socialMediaButtonBackground};
   -webkit-appearance: none;
   box-shadow: ${({ theme }) => `10px 10px 30px ${theme.colors.general.socialMediaButtonShadow}`};
@@ -16,6 +16,10 @@ const StyledWrapper = styled.div`
   border: ${({ theme }) => `1px solid ${theme.colors.general.checkboxBorder}`};
   border-radius: 6px;
   cursor: pointer;
+
+  @media (max-width: 700px) {
+    height: 48px;
+  }
 
   img {
     height: 32px;

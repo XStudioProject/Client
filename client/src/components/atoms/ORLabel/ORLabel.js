@@ -9,7 +9,8 @@ const StyledHeading = styled.h2`
   font-size: ${({ theme }) => theme.fontSize.xs};
   color: ${({ theme }) => theme.colors.home.ORLabelText};
   width: 100%;
-  margin-bottom: 8px;
+  margin: 16px 0;
+
   @media (min-width: 1920px) and (min-height: 1080px) {
     margin-bottom: 16px;
     font-size: ${({ theme }) => theme.fontSize.m};

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const StyledWrapper = styled.button`
   width: 100%;
   min-width: 350px;
-  height: 40px;
+  height: 56px;
   border: ${({ theme, green }) =>
     green ? 'none' : `1px solid ${theme.colors.home.formInputBorder}`};
   border-radius: 6px;
@@ -27,15 +27,12 @@ const StyledWrapper = styled.button`
 
   @media (min-width: 1920px) and (min-height: 1080px) {
     font-size: ${({ theme }) => theme.fontSize.s};
-    height: 60px;
+    height: 56px;
     margin-bottom: 16px;
   }
 
   @media (max-width: 700px) {
     min-width: 250px;
-  }
-
-  @media (min-width: 1920px) and (min-height: 1080px) {
     height: 48px;
   }
 `;
