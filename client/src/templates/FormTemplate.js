@@ -91,7 +91,8 @@ const StyledImageContainer = styled.div`
     }
 
     @media (max-height: 630px) {
-      max-height: 25vh;
+      min-height: 160px;
+      max-height: 28vh;
     }
   }
 

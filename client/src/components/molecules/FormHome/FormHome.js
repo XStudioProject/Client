@@ -189,7 +189,9 @@ const FormHome = () => {
           <StyledLink to="/register">
             <StyledButtonV1 name="Zarejestruj się" green />
           </StyledLink>
-          <StyledButtonV1 name="Zaloguj się" />
+          <StyledLink to="/login">
+            <StyledButtonV1 name="Zaloguj się" />
+          </StyledLink>
         </>
       )}
       <ORLabel>LUB</ORLabel>
