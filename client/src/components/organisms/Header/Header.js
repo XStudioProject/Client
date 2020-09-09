@@ -6,6 +6,7 @@ import useWindowSize from 'utils/useWindowSize';
 
 import { ReactComponent as SocialMediaFacebookIcon } from 'assets/images/facebook-3.svg';
 import { ReactComponent as SocialMediaLinkedinIcon } from 'assets/images/linkedin.svg';
+import { ReactComponent as BackIcon } from 'assets/images/back.svg';
 
 import Logo from 'components/atoms/Logo/Logo';
 
@@ -17,6 +18,7 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   padding-right: 43px;
   margin-top: 40px;
+  position: relative;
   padding-left: ${({ location }) => (location === '/' || location === '/register' ? '20vw' : 0)};
 
   @media (max-width: 1350px) {
@@ -45,6 +47,22 @@ const StyledSocialMediaIconsContainer = styled.div`
   }
 `;
 
+const StyledLogo = styled(Logo)`
+  justify-self: center;
+`;
+
+const StyledBackButton = styled(BackIcon)`
+  width: 8px;
+  height: 16px;
+  border: none;
+  cursor: pointer;
+  justify-self: flex-start;
+  position: absolute;
+  left: 16px;
+
+  display: ${({ location }) => (location === '/' ? 'none' : 'block')};
+`;
+
 const Header = ({ location }) => {
   const size = useWindowSize();
 
@@ -59,7 +77,10 @@ const Header = ({ location }) => {
           </StyledSocialMediaIconsContainer>
         </>
       ) : (
-        <Logo mobile />
+        <>
+          <StyledBackButton location={location} />
+          <StyledLogo mobile />
+        </>
       )}
     </StyledHeader>
   );

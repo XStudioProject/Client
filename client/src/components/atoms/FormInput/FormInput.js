@@ -41,6 +41,7 @@ const StyledInput = styled.input`
   border-radius: 6px;
   -webkit-appearance: none;
   box-shadow: ${({ theme }) => `15px 15px 30px ${theme.colors.home.formInputShadow}`};
+  position: relative;
 
   ::placeholder {
     font-size: ${({ theme }) => theme.fontSize.xs};
@@ -58,6 +59,15 @@ const StyledInput = styled.input`
 
   @media (min-width: 1920px) and (min-height: 1080px) {
     height: 48px;
+  }
+
+  ::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: black;
+    z-index: 100;
   }
 `;
 
