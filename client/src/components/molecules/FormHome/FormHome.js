@@ -182,7 +182,9 @@ const FormHome = () => {
             </StyledCheckboxContainer>
             <StyledButtonV1 name="Zaloguj się" />
           </StyledForm>
-          <StyledButtonV1 name="Zarejestruj się" green />
+          <StyledLink to="/register">
+            <StyledButtonV1 name="Zarejestruj się" green />
+          </StyledLink>
         </>
       ) : (
         <>

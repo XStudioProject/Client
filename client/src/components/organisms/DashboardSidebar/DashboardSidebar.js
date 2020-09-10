@@ -16,7 +16,7 @@ import { ReactComponent as SettingsIcon } from 'assets/images/dashboard-6.svg';
 import { ReactComponent as HelpIcon } from 'assets/images/dashboard-7.svg';
 
 const StyledWrapper = styled.div`
-  width: 19.9vw;
+  width: 100%;
   height: 100vh;
   background-color: ${({ theme }) => theme.colors.dashboard.sidebarBackground};
   box-shadow: ${({ theme }) => `10px 10px 30px ${theme.colors.dashboard.shadow}`};
