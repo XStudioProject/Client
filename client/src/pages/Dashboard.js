@@ -7,6 +7,7 @@ import DashboardSidebar from 'components/organisms/DashboardSidebar/DashboardSid
 
 // Dashboard elements
 import DashboardHeader from 'components/molecules/DashboardHeader/DashboardHeader';
+import DashboardCalendar from 'components/organisms/DashboardCalendar/DashboardCalendar';
 
 const StyledWrapper = styled.div`
   min-width: 100vw;
@@ -38,10 +39,9 @@ const StyledDashboard2 = styled.div`
   grid-row: 2/3;
 `;
 
-const StyledCalendar = styled.div`
-  background: lightcyan;
-  grid-column: 1/3;
+const StyledCalendar = styled(DashboardCalendar)`
   grid-row: 3/4;
+  grid-column: 1/3;
 `;
 
 const StyledInfo = styled.div`

@@ -54,8 +54,11 @@ export const theme = {
       dashboardTextLight: '#7F8B9C',
       dashboardTextDark: '#041C3F',
       dashboardTextGreen: '#00CC96',
+      dashboardElementBorder: '#F4F4F4',
       greenLabel: '#00CC96',
       shadow: 'rgba(174, 174, 192, 0.1)',
+      calendarActiveBackground: '#F2FCFA',
+      textLine: '#D3E2DE',
     },
   },
 };
