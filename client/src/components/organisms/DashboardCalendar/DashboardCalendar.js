@@ -1,10 +1,11 @@
-// Calendar header components
-import DashboardTitle from 'components/atoms/DashboardTitle/DashboardTitle';
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+// Calendar header components
+import DashboardTitle from 'components/atoms/DashboardTitle/DashboardTitle';
 import SeeMoreButton from 'components/atoms/SeeMoreButton/SeeMoreButton';
+
 import DashboardCalendarItem from 'components/molecules/DashboardCalendarItem/DashboardCalendarItem';
 
 const StyledWrapper = styled.section`
