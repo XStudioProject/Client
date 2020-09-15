@@ -13,7 +13,7 @@ const RegularText = styled.p`
     text-align: center;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 1500px) {
     font-size: ${({ theme }) => theme.fontSize.xs};
   }
 `;

@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     width: 100vw;
     background-color: #FAFAFA;
     font-family: 'Montserrat', sans-serif;

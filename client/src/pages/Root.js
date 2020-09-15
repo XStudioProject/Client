@@ -11,6 +11,7 @@ import { GlobalStyle } from 'utils/GlobalStyle';
 import Home from 'pages/Home';
 import Register from 'pages/Register';
 import Login from 'pages/Login';
+import Dashboard from 'pages/Dashboard';
 
 //Other utils
 import useWindowSize from 'utils/useWindowSize';
@@ -29,6 +30,7 @@ function Root() {
             <Route path="/login" exact>
               {size.width > 700 ? <Redirect to="/" /> : <Login />}
             </Route>
+            <Route path="/dashboard" exact component={Dashboard} />
           </Switch>
         </ThemeProvider>
       </LastLocationProvider>

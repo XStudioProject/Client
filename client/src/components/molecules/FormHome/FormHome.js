@@ -20,7 +20,7 @@ import googleIcon from 'assets/images/google.svg';
 const StyledWrapper = styled.div`
   height: auto;
   width: auto;
-  max-width: 464px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -182,7 +182,9 @@ const FormHome = () => {
             </StyledCheckboxContainer>
             <StyledButtonV1 name="Zaloguj się" />
           </StyledForm>
-          <StyledButtonV1 name="Zarejestruj się" green />
+          <StyledLink to="/register">
+            <StyledButtonV1 name="Zarejestruj się" green />
+          </StyledLink>
         </>
       ) : (
         <>

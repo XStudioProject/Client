@@ -31,7 +31,7 @@ const StyledLabel = styled.label`
 
 const StyledInput = styled.input`
   width: 100%;
-  height: 48px;
+  height: 56px;
   padding-left: 1.6rem;
   background-color: ${({ theme }) => theme.colors.home.whiteLabel};
   display: flex;
@@ -54,6 +54,7 @@ const StyledInput = styled.input`
 
     @media (max-width: 700px) {
       font-weight: ${({ theme }) => theme.fontWeights.medium};
+      height: 48px;
     }
   }
 
