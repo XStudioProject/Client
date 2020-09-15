@@ -10,19 +10,39 @@ const StyledWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 24px;
+
+  @media (max-width: 1500px) {
+    margin-bottom: 8px;
+  }
 `;
 
 const StyledTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 12px;
+
+  @media (max-width: 1500px) {
+    margin-left: 8px;
+  }
+`;
+
+const StyledIconContainer = styled.div`
+  width: auto;
+  height: auto;
+  svg {
+    @media (max-width: 1500px) {
+      width: 70%;
+    }
+  }
 `;
 
 const DashboardEventDetail = ({ icon, title, content }) => {
   const Icon = icon;
   return (
     <StyledWrapper>
-      <Icon />
+      <StyledIconContainer>
+        <Icon />
+      </StyledIconContainer>
       <StyledTextContainer>
         <DashboardCommonText20>{title}</DashboardCommonText20>
         <DashboardCommonText20 black bold>

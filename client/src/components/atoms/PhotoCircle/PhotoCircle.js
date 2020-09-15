@@ -10,6 +10,11 @@ const PhotoCircle = styled.div`
   background-image: ${({ photo }) => (photo ? `url(${photo})` : `url(${TestCircle})`)};
   background-position: center;
   cursor: pointer;
+
+  @media (max-width: 1500px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 export default PhotoCircle;

@@ -65,6 +65,10 @@ const StyledLine = styled.span`
   height: 26px;
   background-color: ${({ theme }) => theme.colors.dashboard.textLine};
   margin: 0 16px;
+
+  @media (max-width: 1500px) {
+    height: 16px;
+  }
 `;
 
 const StyledTimeContainer = styled.div`

@@ -43,12 +43,20 @@ const StyledNavigation = styled.nav`
 const StyledIllustrationContainer = styled.div`
   width: 100%;
   height: auto;
-  padding-left: 40px;
   margin-top: 8px;
   margin-bottom: 16px;
-
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   svg {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    max-height: 30vh;
+
+    @media (max-width: 1500px) {
+      max-height: 25vh;
+    }
   }
 `;
 

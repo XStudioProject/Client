@@ -11,8 +11,8 @@ import DashboardCalendar from 'components/organisms/DashboardCalendar/DashboardC
 import DashboardEventContainer from 'components/organisms/DashboardEventContainer/DashboardEventContainer';
 
 const StyledWrapper = styled.div`
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   background-color: ${({ theme }) => theme.colors.dashboard.dashboardBackground};
   display: grid;
   grid-template-columns: 19.9vw auto;
@@ -52,7 +52,7 @@ const StyledEventContainer = styled(DashboardEventContainer)`
 
 function Dashboard() {
   useEffect(() => {
-    noScroll.on();
+    noScroll.off();
   }, []);
 
   return (

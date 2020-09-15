@@ -19,6 +19,11 @@ const StyledPhoto = styled.img`
   border: none;
   border-radius: 50%;
   margin-right: 8px;
+
+  @media (max-width: 1500px) {
+    width: 24px;
+    height: 24px;
+  }
 `;
 
 const StyledName = styled(DashboardCommonText20)`

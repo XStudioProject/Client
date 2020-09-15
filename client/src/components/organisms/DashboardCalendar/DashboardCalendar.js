@@ -15,6 +15,10 @@ const StyledWrapper = styled.section`
   background-color: ${({ theme }) => theme.colors.dashboard.dashboardElementBackground};
   display: grid;
   grid-template-rows: 72px auto 16px;
+
+  @media (max-width: 1500px) {
+    grid-template-rows: 62px auto 8px;
+  }
 `;
 
 const StyledInformation = styled.div`

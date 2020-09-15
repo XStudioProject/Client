@@ -30,17 +30,35 @@ const StyledWrapper = styled.section`
 
 const StyledDashboardTitle = styled(DashboardTitle)`
   margin-bottom: 8px;
+
+  @media (max-width: 1500px) {
+    font-size: 24px;
+  }
 `;
 
 const StyledDescription = styled(DashboardCommonText20)`
   margin-bottom: 24px;
+
+  @media (max-width: 1500px) {
+    margin-bottom: 16px;
+  }
 `;
 
 const StyledParticipants = styled(DashboardCommonText20)`
   margin-bottom: 8px;
+
+  @media (max-width: 1500px) {
+    margin-bottom: 4px;
+  }
 `;
 
-const StyledTransparentButtonV1 = styled(ButtonV1)`
+const StyledButtonV1 = styled(ButtonV1)`
+  @media (max-width: 1500px) {
+    height: 40px;
+  }
+`;
+
+const StyledTransparentButtonV1 = styled(StyledButtonV1)`
   background: none;
   box-shadow: none;
   border: none;
@@ -68,7 +86,7 @@ const DashboardEventContainer = ({ className }) => {
       {details.map(({ icon, title, content }) => (
         <DashboardEventDetail key={title} icon={icon} title={title} content={content} />
       ))}
-      <ButtonV1 green name="Rozpocznij wizyte" />
+      <StyledButtonV1 green name="Rozpocznij wizyte" />
       <StyledTransparentButtonV1 name="Anuluj wizyte" />
     </StyledWrapper>
   );

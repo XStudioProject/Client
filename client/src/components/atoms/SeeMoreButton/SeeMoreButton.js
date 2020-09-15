@@ -15,16 +15,33 @@ const StyledText = styled.p`
   font-weight: ${({ theme }) => theme.fontWeights.regular};
   color: ${({ theme }) => theme.colors.dashboard.dashboardTextGreen};
   font-family: 'DM Sans', sans-serif;
+
+  @media (max-width: 1500px) {
+    font-size: ${({ theme }) => theme.fontSize.xs};
+  }
 `;
 
-const StyledRightArrow = styled(RightArrow)`
+const StyledIconContainer = styled.div`
   margin-left: 16px;
+  width: 9px;
+  height: 14px;
+
+  @media (max-width: 1500px) {
+    margin-left: 12px;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const SeeMoreButton = () => (
   <StyledWrapper>
     <StyledText>Zobacz więcej</StyledText>
-    <StyledRightArrow />
+    <StyledIconContainer>
+      <RightArrow />
+    </StyledIconContainer>
   </StyledWrapper>
 );
 

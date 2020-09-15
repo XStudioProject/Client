@@ -14,7 +14,15 @@ const DashboardTitle = styled.h2`
       font-weight: ${({ theme }) => theme.fontWeights.bold};
       font-size: ${({ theme }) => theme.fontSize.l};
       text-transform: initial;
+
+      @media (max-width: 1500px) {
+        font-size: ${({ theme }) => theme.fontSize.m};
+      }
     `}
+
+  @media (max-width: 1500px) {
+    font-size: ${({ theme }) => theme.fontSize.xs};
+  }
 `;
 
 export default DashboardTitle;

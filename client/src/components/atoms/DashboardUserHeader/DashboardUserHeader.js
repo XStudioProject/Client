@@ -20,6 +20,10 @@ const StyledText = styled.p`
   font-family: 'DM Sans', sans-serif;
   margin-left: 16px;
   cursor: pointer;
+
+  @media (max-width: 1500px) {
+    font-size: ${({ theme }) => theme.fontSize.xs};
+  }
 `;
 
 const StyledImage = styled.img`
@@ -29,6 +33,11 @@ const StyledImage = styled.img`
   border-radius: 50%;
   margin-left: 52px;
   cursor: pointer;
+
+  @media (max-width: 1500px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 const StyledDownArrow = styled(DownArrow)`

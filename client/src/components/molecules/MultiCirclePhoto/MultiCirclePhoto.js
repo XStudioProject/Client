@@ -6,6 +6,10 @@ import PhotoCircle from 'components/atoms/PhotoCircle/PhotoCircle';
 const StyledWrapper = styled.div`
   display: flex;
   margin-bottom: 32px;
+
+  @media (max-width: 1500px) {
+    margin-bottom: 16px;
+  }
 `;
 
 const StyledPhotoCircle = styled(PhotoCircle)`
